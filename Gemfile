@@ -57,6 +57,6 @@ group :development do
   gem 'spring'
 
   #Animate.css for Rails
-  # gem "animate-rails"
+  gem "animate-rails"
 end
 
