@@ -18,12 +18,15 @@
 
 					<% @directions.each do |turn| %>
 					<div class="turn-directions">
-						<li> <%= turn["html_instructions"].html_safe %>. &nbsp &nbsp<%= turn["distance"]["text"] %>, <%= turn["duration"]["text"] %></li>
+						<ul class="list-group">
+						<li class="list-group-item"> <%= turn["html_instructions"].html_safe %>. &nbsp &nbsp<%= turn["distance"]["text"] %>, <%= turn["duration"]["text"] %></li>
 						<!-- <p> <%= turn["distance"]["text"] %>, <%= turn["duration"]["text"] %> </p> -->
+						</ul>
 					</div>
 					<% end %>
 					<div>
-						 <a href=<%=@url%>><button>UBER</button></a>
+						<h3 style="text-align:center">GRAB A UBER!</h3>
+						 <a href=<%=@url%>><button><img src="<%= asset_path( 'uber.png' ) %>" class="img-responsive"/></button></a>
 					</div>
 	
 			</div>

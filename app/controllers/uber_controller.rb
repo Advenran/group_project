@@ -16,14 +16,16 @@ class UberController < ApplicationController
     @response = HTTParty.post(@url)
     @asstoken = @response["access_token"]
 
-
+    lat = cookies[:lat]
+    long = cookies[:long]
     productcar = 'b8e5c464-5de2-4539-a35a-986d6e58f186'
     base_urltwo = "https://sandbox-api.uber.com/v1/requests/estimate"
     
-    
+
+
     @urltwo = base_urltwo
                 
-    @rs = HTTParty.post(@urltwo , headers: {"Authorization" => "Bearer " + @asstoken , "Content-Type" => "application/json"} , body: "{\"product_id\" : \"#{productcar}\" , \"start_latitude\" : \"40.7401009\" , \"start_longitude\" : \"-73.9897396\" , \"end_latitude\" : \"40.759011\" , \"end_longitude\" : \"-73.9844722\" }")
+    @rs = HTTParty.post(@urltwo , headers: {"Authorization" => "Bearer " + @asstoken , "Content-Type" => "application/json"} , body: "{\"product_id\" : \"#{productcar}\" , \"start_latitude\" : \"#{lat}\" , \"start_longitude\" : \"#{long}\" , \"end_latitude\" : \"40.759011\" , \"end_longitude\" : \"-73.9844722\" }")
     end
 
 end

@@ -46,8 +46,7 @@ a:hover{
 }
 .main-logout{
 	text-align: center;
-	display: inline-block;
-	padding-top: 13%;
+	padding-top: 7%;
 	padding-left: 10%;
 }
 
@@ -97,6 +96,12 @@ video#bgvid {
     background-size: cover; 
 }
 
+/* Portrait tablets and small desktops */
+@media (min-width: 0px) and (max-width: 991px) {
+	#left-bar{
+		text-align: center;
+	}
+}
 
 
 
