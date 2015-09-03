@@ -1,5 +1,5 @@
 .main{
-	background-color: rgba(85, 187, 170, 0.5);
+	background-color: rgba(85, 187, 170, 0.8);
 	padding: 7%;
 	padding-top: %;
 }
@@ -11,7 +11,8 @@
 	top:3em;
 }
 .bar{
-	border: 2px solid white;
+	   border: 2px solid #223A36;
+	   margin-bottom: 1%;
 }
 .h2head{
 	padding-top: 0em;
@@ -77,4 +78,10 @@ label{
 	padding-bottom: 23%;
 	
 }
+
+input{
+	text-align: center;
+}
+
+
 

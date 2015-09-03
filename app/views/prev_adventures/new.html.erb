@@ -14,6 +14,9 @@
 				<p><%= link_to "Past Adventures", user_prev_adventures_path(@current_user) %></p>
 				<p><%= link_to "Edit Profile", edit_user_path(@current_user) %></p>
 			</ul>
+			<div class="bar">
+			</div>
+			<h3>Today's Forecast</h3>
 			<h3><img src="<%=@icon%>">&nbsp <%= @current_forecast %> </h3>
 		</div>
 
@@ -21,24 +24,26 @@
 		<div class="col-md-6">
 			<div class="big-form">
 				<div class="main">
-					<h2 class="h2head">Enter your budget, number of people and the timeframe to start</h2>
+					<h2 class="h2head">Adventure Criteria</h2>
 					<div class="bar">
 					</div>
 					<%= form_tag %>
 					<div class="form-group">
-						Enter your $
+						<p>Budget</p>
+						<p>(USD)</p>
 						<%= text_field_tag :amount_spend, "", class: "form-control" %>
 					</div>
 					<div class="form-group">
-						Enter amount of people
+						Amount of People
 						<%= text_field_tag :amount_people, "", class: "form-control" %>
 					</div>
 					<div class="form-group">
-						Enter minutes for adventure
+						<p>Time Avaliable</p>
+						<p>(Minutes)</p>
 						<%= text_field_tag :amount_time, "", class: "form-control" %>
 					</div>
 					<div class="form-group">
-						How would you like to get there?
+						Transportation
 						<%= select_tag :mode_of_travel, options_for_select([ 'Walking', 'Bicycling', 'Transit', 'Driving' ], 'Walking'), class: "form-control" %>
 					</div>
 						<%= submit_tag "submit", class: "btn btn-default"%>

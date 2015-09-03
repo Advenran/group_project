@@ -14,7 +14,7 @@ class AdventuresController < ApplicationController
 			temperature = response["current_observation"]["temp_f"]
 			weather = response["current_observation"]["weather"]
 			@icon = response["current_observation"]["icon_url"]
-			@current_forecast = "#{weather} #{temperature} F°"
+			@current_forecast = "#{weather} #{temperature}° F"
 
 			@new_prev_adventure = PrevAdventure.new
 
