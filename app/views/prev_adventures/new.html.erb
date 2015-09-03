@@ -31,16 +31,16 @@
 					<div class="form-group">
 						<p>Budget</p>
 						<p>(USD)</p>
-						<%= text_field_tag :amount_spend, "", class: "form-control" %>
+						<%= text_field_tag :amount_spend, "", class: "form-control", :required => true %>
 					</div>
 					<div class="form-group">
 						Amount of People
-						<%= text_field_tag :amount_people, "", class: "form-control" %>
+						<%= text_field_tag :amount_people, "", class: "form-control", :required => true %>
 					</div>
 					<div class="form-group">
 						<p>Time Avaliable</p>
 						<p>(Minutes)</p>
-						<%= text_field_tag :amount_time, "", class: "form-control" %>
+						<%= text_field_tag :amount_time, "", class: "form-control", :required => true %>
 					</div>
 					<div class="form-group">
 						Transportation
